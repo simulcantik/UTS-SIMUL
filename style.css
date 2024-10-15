@@ -1,125 +1,111 @@
-.jumbotron {
-    padding: 4rem 1rem;
-    background-color: rgb(238, 255, 0);
-}
+/* style.css */
 
-.project {
-    background-color: rgb(255, 0, 212);
-}
-
-/* Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
-/* Global Reset and Box Model */
-* {
+body {
+    position: relative;
+    max-height: max-content;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #f9f1f1; /* Warna latar belakang lembut */
+    color: #333;
 }
 
-*:focus,
-*:active {
-    outline: none !important;
-    -webkit-tap-highlight-color: transparent;
+header {
+    background-color: #ffcccb; /* Warna header pink */
+    padding: 10px 20px;
 }
 
-/* Wrapper and Icons */
-.wrapper {
-    display: inline-flex;
-    list-style: none;
+nav ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-.wrapper .icon {
-    position: relative;
-    background: #ffffff;
-    border-radius: 50%;
-    padding: 15px;
-    margin: 10px;
-    width: 50px;
-    height: 50px;
-    font-size: 18px;
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ff0095;
+}
+
+h1, h2 {
+    color: #ff6f61; /* Warna judul */
+}
+
+section {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff; /* Latar belakang section putih */
+    box-shadow: 0 0 20px rgba(255, 0, 128, 0.1);
+}
+
+#home {
+    background-image: url('ulfa.jpg'); /* Ganti dengan path gambar background Anda */
+    background-size: cover; /* Membuat gambar memenuhi seluruh area */
+    background-position: center; /* Memusatkan gambar */
+    background-repeat: no-repeat; /* Tidak mengulangi gambar */
+    height: 100vh; /* Membuat section memiliki tinggi 100% dari viewport */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    color: white; /* Ubah warna teks jika perlu agar kontras dengan background */
+}
+
+img {
+    margin-bottom: 20px;
+}
+
+container {
+        text-align: center; /* Pusatkan elemen inline (seperti gambar) di dalam container */
+    }
+
+    img {
+        display: block; /* Agar gambar tidak menjadi elemen inline */
+        margin: 0 auto; /* Pusatkan secara horizontal */
+    }
+
+form {
+    margin-top: 10px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 32px;
+    max-height: max-content;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea {
+    width: 98%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #ff6f61; /* Warna tombol */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
     cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-/* Tooltip Styling */
-.wrapper .tooltip {
-    position: absolute;
-    top: 0;
-    font-size: 14px;
-    background-color: #ffffff;
-    color: #000000; /* Changed to black for visibility */
-    padding: 5px 8px;
-    border-radius: 5px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+form button:hover {
+    background-color: #ff494d; /* Warna tombol saat hover */
 }
 
-/* Tooltip Arrow */
-.wrapper .tooltip::before {
-    position: absolute;
-    content: "";
-    height: 8px;
-    width: 8px;
-    background: #ffffff;
-    bottom: -3px;
-    left: 50%;
-    transform: translate(-50%) rotate(45deg);
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-/* Hover Effects */
-.wrapper .icon:hover .tooltip {
-    top: -45px;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-}
-
-.wrapper .icon:hover span,
-.wrapper .icon:hover .tooltip {
-    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
-}
-
-/* Social Media Hover Colors */
-.wrapper .facebook:hover,
-.wrapper .facebook:hover .tooltip,
-.wrapper .facebook:hover .tooltip::before {
-    background: #1877F2;
-    color: #ffffff;
-}
-
-.wrapper .twitter:hover,
-.wrapper .twitter:hover .tooltip,
-.wrapper .twitter:hover .tooltip::before {
-    background: #000;
-    color: #fff;
-}
-
-.wrapper .instagram:hover,
-.wrapper .instagram:hover .tooltip,
-.wrapper .instagram:hover .tooltip::before {
-    background: #e94261;
-    color: #ffffff;
-}
-
-.wrapper .github:hover,
-.wrapper .github:hover .tooltip,
-.wrapper .github:hover .tooltip::before {
-    background: #333333;
-    color: #ffffff;
-}
-
-.wrapper .youtube:hover,
-.wrapper .youtube:hover .tooltip,
-.wrapper .youtube:hover .tooltip::before {
-    background: #CD201F;
-    color: #ffffff;
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ffcccb; /* Warna footer */
+    bottom: 0;
 }
